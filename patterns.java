@@ -1,6 +1,7 @@
 import java.util.*;
 public class patterns {
     public static void main(String[] args) {
+        //hello
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         if(n==1){
