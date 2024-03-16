@@ -20,11 +20,20 @@ public class arrays3 {
         return min;
     }
     public static void main(String[] args) {
-        int arr[]={2,3,4,56,78,7};
-        int largest = getLargest(arr);
-        System.out.println("LARGEST NUMBER IN AN ARRAY : "+largest);
-        int smallest = getSmallest(arr);
-        System.out.println("SMALLEST NUMBER IN AN ARRAY : "+smallest);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("length of an array = ");
+        int len = sc.nextInt();
+        int arr[]=new int[len];
+        System.out.print("enter elements of an array = ");
+        for(int i=0;i<len;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println(getLargest(arr));
+        // int arr[]={2,3,4,56,78,7};
+        // int largest = getLargest(arr);
+         //System.out.println("LARGEST NUMBER IN AN ARRAY : "+largest);
+        // int smallest = getSmallest(arr);
+        // System.out.println("SMALLEST NUMBER IN AN ARRAY : "+smallest);
 
     }
 }

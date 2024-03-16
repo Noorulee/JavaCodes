@@ -6,11 +6,33 @@ public class arrays10 {
         arr[nz]=arr[z];
         arr[z]= temp;
     }
+    public static void pushEven(int arr[]){
+        int start = 0;
+        int end = arr.length-1;
+        while(start<end){
+            while((start<end)&&(arr[end]%2==0)){
+                end--;
+                if(start>=end){
+                    break;
+                }
+            }
+            if(arr[start]%2==0){
+                int temp = arr[start];
+                arr[start]=arr[end];
+                arr[end]=temp;
+                end--;
+            }
+            start++;
+        }
+    }
     public static void pushZeros(int arr[]){
         int nz = 0;
         int z = 0;
         while(z<arr.length){
-            if(arr[z]!=0){
+            //if(arr[z]%2==0)--->for odd 
+            //if(arr[z]%2!=0)--->for even
+            //if(arr[z]<0)--->for negatives   and so on...
+            if(arr[z]==0){
                 swap(arr,nz,z);
                 nz++;
             }

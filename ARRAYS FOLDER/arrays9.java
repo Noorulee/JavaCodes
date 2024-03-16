@@ -7,15 +7,18 @@ public class arrays9 {
             int input = sc.nextInt();
             return input;
     }
-    public static int insert(int arr[],int pos,int ele,int size,int cap){
+    public static int insert(int A[],int pos,int ele,int size,int cap){
         
+        if(size<cap){
             for(int i=size;i>pos;i--){
-                arr[i]=arr[i-1];
-                // if(size==cap){
-                //     break;
-                // }
+                A[i]=A[i-1];
                 }
-        arr[pos]=ele;
+                A[pos]=ele;
+        }else if(size==cap){
+            System.out.println("we cannot insert ");
+        }
+        
+       
         size++;
         return size;
     }

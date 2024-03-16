@@ -1,28 +1,35 @@
 import java.util.*;
 public class arrays11 {
-    public static void rotate(int arr[],int x,int b[]){
+    public static int takeInput(String str){
+        Scanner sc = new Scanner(System.in);
+        System.out.print(str);
+        int input = sc.nextInt();
+        return input;
+    }
+    public static void rotate(int arr[],int x,int dir,int b[]){
        
-       for(int i=0;i<arr.length;i++){
-        b[(i+x)%arr.length]=arr[i];
+       if(dir==1){
+        for(int i=0;i<arr.length;i++){
+            b[(i+x)%arr.length]=arr[i];
+        }
+       }else if(dir==0){
+        for(int i=0;i<arr.length;i++){
+            b[(i-x)%arr.length]=arr[i];
+        }
        }
-
+       
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // System.out.print("Enter the direction of the rotation = ");
-        // String dir = sc.nextLine();
-        System.out.print("enter the shift = ");
-        int x = sc.nextInt();
-        System.out.print("enter the capacity of an array = ");
-        int len = sc.nextInt();
-        System.out.println("enter the value of "+len+" elements in an array : ");
+        int x = takeInput("enter the number of rotations = ");
+        int dir =takeInput("enter 1 if right and 0 if left ");
+        int len = takeInput("enter the value of len = ");
         int arr[]=new int[len];
-        int b[]=new int[arr.length];
         for(int i=0;i<len;i++){
-            arr[i]=sc.nextInt();
+            arr[i]=takeInput("enter the element of array at "+i+" index = ");
         }
-        rotate(arr,x,b);
-        for(int i:arr){
+        int b[]=new int[arr.length];
+        rotate(arr,x,dir,b);
+        for(int i:b){
             System.out.print(i+" ");
         }
 
