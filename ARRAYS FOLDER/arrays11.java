@@ -1,3 +1,4 @@
+//ROTATING AN ARRAY
 import java.util.*;
 public class arrays11 {
     public static int takeInput(String str){
@@ -14,7 +15,7 @@ public class arrays11 {
         }
        }else if(dir==0){
         for(int i=0;i<arr.length;i++){
-            b[(i-x)%arr.length]=arr[i];
+            b[(i-x+arr.length)%arr.length]=arr[i];
         }
        }
        
