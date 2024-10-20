@@ -12,5 +12,7 @@ public class arrays13 {
         System.out.println(sum(a,b));
         System.out.println(a);
         System.out.println(b);
+        int g = 20;
+        
     }
 }
